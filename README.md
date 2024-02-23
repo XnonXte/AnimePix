@@ -2,4 +2,4 @@
 
 ![Mockup image](./image.png)
 
-Anime Pix is a terminal program written in Python to retrieve anime pictures using [waifu.im]("https://api.waifu.im/search") API.
+Anime Pix is a terminal program written in Python to retrieve waifu pictures using [waifu.im]("https://api.waifu.im/search") API.
