@@ -5,7 +5,6 @@ from termcolor import colored
 
 just_fix_windows_console()
 
-
 print(colored("Welcome to anime_pix v0.1", "white", "on_blue"))
 print(colored("(c) 2024 XnonXte", "white", "on_blue"))
 
@@ -50,9 +49,9 @@ while True:
     print(nsfw_prompt_message)
     is_many = input(colored("Multiple results (y/n): ", "magenta")).lower() == "y"
     many_prompt_message = (
-        colored("Only 1 result would be retrieved.", "yellow")
+        colored("An upward of 30 results would be retrieved.", "yellow")
         if is_many
-        else colored("An upward of 30 results would be retrieved.", "yellow")
+        else colored("Only 1 result would be retrieved.", "yellow")
     )
     print(many_prompt_message)
     availability_message = (
@@ -86,7 +85,7 @@ while True:
             file_path = f"./downloads/{file_name}"
 
             download_image(url, file_path)
-            print(colored(f"Image {count} out of {len(images)} downloaded!", "magenta"))
+            print(colored(f"Image {count} out of {len(images)} downloaded!", "green"))
         except Exception as e:
             print(
                 colored(
