@@ -1,3 +1,4 @@
+from os import path, makedirs
 import requests
 from colorama import just_fix_windows_console
 from datetime import datetime
@@ -82,7 +83,9 @@ while True:
             url = image["url"]
             ext = image["extension"]
             file_name = f"anime_pix-{tag}-{date_now}{ext}"
-            file_path = f"./downloads/{file_name}"
+            if not path.exists("downloads"):
+                makedirs("downloads")
+            file_path = path.join("downloads", file_name)
 
             download_image(url, file_path)
             print(colored(f"Image {count} out of {len(images)} downloaded!", "green"))
